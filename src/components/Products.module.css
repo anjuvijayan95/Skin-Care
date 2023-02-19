@@ -1,0 +1,134 @@
+.container {
+  padding: 0 2rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.container > img {
+  position: absolute;
+  left: 30%;
+  top: -2rem;
+  width: 8rem;
+  transform: rotate(-70deg);
+}
+
+h1 {
+  font-size: 2.1rem;
+}
+
+.products {
+  display: grid;
+  width: 90%;
+  grid-template-columns: 25% auto;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  font-weight: bold;
+  font-size: 1.3rem;
+  position: relative;
+}
+
+.menu > li:hover {
+  color: #fe956f;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.menu > img {
+  position: absolute;
+  left: 20%;
+  top: -2rem;
+  width: 6rem;
+  transform: rotate(70deg);
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  height: 25rem;
+  overflow-y: scroll;
+  grid-gap: 1.3rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.product {
+  width: 12rem;
+  height: 8rem;
+  position: relative;
+  background-color: white;
+  padding: 1rem;
+  overflow: hidden;
+  border-radius: 1rem;
+  display: flex;
+}
+
+.product > img {
+  position: absolute;
+  top: 3rem;
+  width: 6rem;
+  height: 11rem;
+}
+
+@media screen and (max-width: 1350px) {
+  .container > img {
+    display: none;
+  }
+  .menu > img {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 856px) {
+  .container > img {
+    display: none;
+  }
+
+  .products {
+    grid-template-columns: none;
+    width: 100%;
+  }
+
+  .menu {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menu > img {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .container {
+    will-change: 100%;
+  }
+
+  .container > img {
+    display: none;
+  }
+
+  .product {
+    width: 80%;
+  }
+  .menu {
+    margin-left: -2rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .container > h1 {
+    text-align: center;
+  }
+}
